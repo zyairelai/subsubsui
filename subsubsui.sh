@@ -74,7 +74,7 @@ grep -E "${domain}\$" /tmp/live_host.txt > /tmp/in_scope_domain.txt
 echo "
 [+] Output saved to $(pwd)/subsubsui_output.txt"
 echo "
-[+] Done! Lazy Mother subsui ;)"
+[+] Done SubEnum! Lazy Mother Fucker ;)"
 rm /tmp/amass*
 rm /tmp/assetfinder* 
 rm /tmp/subfinder*
