@@ -33,20 +33,41 @@ if [ -z "$domain" ]; then
     read -p "Enter the domain name (eg: target.com): " domain
 fi
 
+# amass
+echo "
+[+] Downloading AMASS stable version"
+wget -q https://github.com/owasp-amass/amass/releases/download/v3.19.2/amass_linux_amd64.zip -O /tmp/amass_linux_amd64.zip
+unzip -q -j /tmp/amass_linux_amd64.zip "*/amass" -d /tmp/
+sleep 1
+
+# assetfinder
+echo "
+[+] Downloading Assetfinder stable version"
+wget -q https://github.com/tomnomnom/assetfinder/releases/download/v0.1.1/assetfinder-linux-amd64-0.1.1.tgz -O /tmp/assetfinder-linux-amd64-0.1.1.tgz
+tar xzf /tmp/assetfinder-linux-amd64-0.1.1.tgz -C /tmp/
+sleep 1
+
+# subfinder
+echo "
+[+] Downloading Subfinder stable version"
+wget -q https://github.com/projectdiscovery/subfinder/releases/download/v2.6.3/subfinder_2.6.3_linux_amd64.zip -O /tmp/subfinder_2.6.3_linux_amd64.zip
+unzip -q /tmp/subfinder_2.6.3_linux_amd64.zip -d /tmp/
+sleep 1
+
 # Run the subdomain enum 
 echo "
 [+] Running all 3 subdomain enum tools"
 echo "
 [+] Starting with AMASS"
-/usr/bin/amass enum -passive -d $domain -o /tmp/amass.txt
+/tmp/amass enum -passive -d $domain -o /tmp/amass.txt
 sleep 1
 echo "
 [+] Continue with Assetfinder"
-/usr/bin/assetfinder $domain > /tmp/assetfinder.txt
+/tmp/assetfinder $domain > /tmp/assetfinder.txt
 sleep 1
 echo "
 [+] Lastly with Subfinder"
-/usr/bin/subfinder -d $domain -o /tmp/subfinder.txt
+/tmp/subfinder -d $domain -o /tmp/subfinder.txt
 sleep 1
 
 # Define the names of your text files
@@ -72,11 +93,11 @@ grep "Nmap scan report for" /tmp/nmap.txt | sed 's/.*for \([^ ]*\) (.*/\1/' | so
 grep -E "${domain}\$" /tmp/live_host.txt > /tmp/in_scope_domain.txt
 
 echo "
-[+] Output saved to $(pwd)/subsubsui_output.txt"
+[+] Output saved to $(pwd)/subfucker_output.txt"
 echo "
-[+] Done! Lazy Mother subsui ;)"
+[+] Done! Lazy Mother Fucker ;)"
 rm /tmp/amass*
 rm /tmp/assetfinder* 
 rm /tmp/subfinder*
 rm /tmp/merged.txt /tmp/nmap.txt /tmp/live_host.txt 
-mv /tmp/in_scope_domain.txt $(pwd)/subsubsui_output.txt
+mv /tmp/in_scope_domain.txt $(pwd)/subfucker_output.txt
