@@ -93,11 +93,11 @@ grep "Nmap scan report for" /tmp/nmap.txt | sed 's/.*for \([^ ]*\) (.*/\1/' | so
 grep -E "${domain}\$" /tmp/live_host.txt > /tmp/in_scope_domain.txt
 
 echo "
-[+] Output saved to $(pwd)/subfucker_output.txt"
+[+] Output saved to $(pwd)/subsubsui_output.txt"
 echo "
-[+] Done! Lazy Mother Fucker ;)"
+[+] Done SubEnum! Lazy Mother Fucker ;)"
 rm /tmp/amass*
 rm /tmp/assetfinder* 
 rm /tmp/subfinder*
 rm /tmp/merged.txt /tmp/nmap.txt /tmp/live_host.txt 
-mv /tmp/in_scope_domain.txt $(pwd)/subfucker_output.txt
+mv /tmp/in_scope_domain.txt $(pwd)/subsubsui_output.txt
