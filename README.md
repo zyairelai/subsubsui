@@ -1,20 +1,20 @@
-# subfucker
+# subsubsui
 Combining 3 subdomain enumeration tool + nmap pinging to filter live target 
 
 # INSTALLATION
 ```
-wget https://raw.githubusercontent.com/zyairelai/subfucker/main/subfucker.sh
-chmod a+x subfucker.sh
-sudo mv subfucker.sh /usr/bin/subfucker
+wget https://raw.githubusercontent.com/zyairelai/subsubsui/main/subsubsui.sh
+chmod a+x subsubsui.sh
+sudo mv subsubsui.sh /usr/bin/subsubsui
 ```
 
 # USAGE
 ```
-subfucker -d <target.com>
+subsubsui -d <target.com>
 ```
 ```
-subfucker -h
-Usage: /usr/bin/subfucker [options]
+subsubsui -h
+Usage: /usr/bin/subsubsui [options]
 
 
 Options:
