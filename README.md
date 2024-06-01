@@ -1,14 +1,9 @@
 # subsubsui
 Combining 3 subdomain enumeration tool + nmap pinging to filter live target 
 
-# PORTABLE VERSION
-If you don't want to mess up your original AMASS, Assetfinder and Subfinder version.  
-You can use the portable version, it will download those static binary everytime you run the script
-```
-wget https://raw.githubusercontent.com/zyairelai/subsubsui/main/portable.sh
-chmod a+x portable.sh
-sudo mv portable.sh /usr/bin/subsubsui
-```
+# HTTPX
+Get a copy of this first
+- https://github.com/projectdiscovery/httpx/releases
 
 # INSTALLATION
 If you are an old school prefer to use stable version of AMASS, Assetfinder and Subfinder
