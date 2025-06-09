@@ -30,7 +30,7 @@ Usage: /usr/bin/subsubsui [options]
 
 Options:
   -h, --help              Display help information
-  -d, --domain <domain>   Domain to scan for XSS, SQLi, SSRF, etc. vulnerabilities
+  -d, --domain <domain>   Domain to scan
 ```
 
 # HOW IT WORKS
